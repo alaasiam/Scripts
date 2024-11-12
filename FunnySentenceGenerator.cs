@@ -7,15 +7,20 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
          string[] words = { "Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird" };
+        
         string sentence = "";
+        
+        int index = 2;
+        
         int wordCount = 0;
 
-        while (wordCount < 7)
+        while (wordCount < words.Length)
         {
-            string randomWord = words[Random.Range(words.Length)];
-
-            sentence += randomWord + " ";
-            wordCount++;
+              sentence += words[index] + " ";
+              
+              wordCount++;
+              
+              index = (index + 3) % words.Length;
         }
 
        Debug.Log("Funny Sentence: " + sentence.Trim());
