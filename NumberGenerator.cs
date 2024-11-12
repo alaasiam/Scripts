@@ -7,22 +7,17 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        int number;
+        int num = 0;
         
-        while (true)
+        while (num < 20)
         {
-            number = random.Next(1, 21);
+            int random = Random.Range(1, 20);
+            Debug.Log(random);
+            num++;
+            if (num == 5){ continue;}
+            if (num == 15){break;}
+            Debug.Log("Alaa");
 
-            if (number == 5)
-            {
-                continue;
-            }
-            Console.WriteLine(number);
-
-            if (number == 15)
-            {
-                break;
-            }
         }
     }
 
